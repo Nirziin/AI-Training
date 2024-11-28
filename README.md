@@ -21,7 +21,8 @@ Here is a list of the performance for a 640 pixel image:
 
 [List from this site](https://docs.ultralytics.com/fr/models/yolov5/#performance-metrics)
 
-First, I train the AI to analyze and find the letters in a lor of images. My dataset for the training is a dataset opensource on RoboFlow with 1175 images with label:  https://universe.roboflow.com/ann36chen-hbcoz/0603-3/dataset/7
+First, I train the AI to analyze and find the letters in a lor of images. 
+  - [My dataset](https://universe.roboflow.com/ann36chen-hbcoz/0603-3/dataset/7) for the training is a dataset opensource on RoboFlow with 1175 images with label.
 To compare, I used YoloV5 S, M, L and X. Every train with every model was more and more accurate.
 
 #Source Code: Organize and document all source code for the project. Include a clear file structure, instructions for setup, and any necessary dependencies for running the code.
