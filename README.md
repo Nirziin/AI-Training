@@ -11,16 +11,15 @@ The key objectives of this project were :
 I used google colab to get some VM with GPU and the model YOLOV5 to train my AI. YoloV5 model is a detection model separate in 5 model by the quickest to the more accurate : N, S, M, L, X.
 
 Here is a list of the performance for a 640 pixel image:
-        Model	              YAML	        Size          mAPval50-95          Speed CPU ONNX          SpeedA100 TensorRT          params          FLOPs
-                                        (pixels)  	       (ms)    	                                        (ms)	                 (M)            (B) 
+| Model                                                                                           | size<br><sup>(pixels) | mAP<sup>val<br>50-95 | mAP<sup>val<br>50 | Speed<br><sup>CPU b1<br>(ms) | Speed<br><sup>V100 b1<br>(ms) | Speed<br><sup>V100 b32<br>(ms) | params<br><sup>(M) | FLOPs<br><sup>@640 (B) |
+| ----------------------------------------------------------------------------------------------- | --------------------- | -------------------- | ----------------- | ---------------------------- | ----------------------------- | ------------------------------ | ------------------ | ---------------------- |
+| [YOLOv5n](https://github.com/ultralytics/yolov5/releases/download/v7.0/yolov5n.pt)              | 640                   | 28.0                 | 45.7              | **45**                       | **6.3**                       | **0.6**                        | **1.9**            | **4.5**                |
+| [YOLOv5s](https://github.com/ultralytics/yolov5/releases/download/v7.0/yolov5s.pt)              | 640                   | 37.4                 | 56.8              | 98                           | 6.4                           | 0.9                            | 7.2                | 16.5                   |
+| [YOLOv5m](https://github.com/ultralytics/yolov5/releases/download/v7.0/yolov5m.pt)              | 640                   | 45.4                 | 64.1              | 224                          | 8.2                           | 1.7                            | 21.2               | 49.0                   |
+| [YOLOv5l](https://github.com/ultralytics/yolov5/releases/download/v7.0/yolov5l.pt)              | 640                   | 49.0                 | 67.3              | 430                          | 10.1                          | 2.7                            | 46.5               | 109.1                  |
+| [YOLOv5x](https://github.com/ultralytics/yolov5/releases/download/v7.0/yolov5x.pt)              | 640                   | 50.7                 | 68.9              | 766                          | 12.1                          | 4.8                            | 86.7               | 205.7                  |
 
-N     yolov5nu.pt      	yolov5n.yaml	    640	             34.3	                  73.6	                    1.06	                  2.6	          7.7
-S     yolov5su.pt	      yolov5s.yaml	    640	             43.0	                  120.7	                    1.27  	                9.1	          24.0
-M     yolov5mu.pt      	yolov5m.yaml	    640	             49.0	                  233.9	                    1.86	                  25.1	        64.2
-L     yolov5lu.pt      	yolov5l.yaml    	640	             52.2	                  408.4	                    2.50	                  53.2	        135.0
-X     yolov5xu.pt      	yolov5x.yaml    	640	             53.2	                  763.2	                    3.81	                  97.2	        246.4
-
-(List from the site : https://docs.ultralytics.com/fr/models/yolov5/#performance-metrics ) 
+[List from this site](https://docs.ultralytics.com/fr/models/yolov5/#performance-metrics)
 
 First, I train the AI to analyze and find the letters in a lor of images. My dataset for the training is a dataset opensource on RoboFlow with 1175 images with label:  https://universe.roboflow.com/ann36chen-hbcoz/0603-3/dataset/7
 To compare, I used YoloV5 S, M, L and X. Every train with every model was more and more accurate.
