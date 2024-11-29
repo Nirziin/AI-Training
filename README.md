@@ -22,8 +22,8 @@ To get more data, I trained the 4 models S,M,L and X from YOLOv5.
 The source code for this project is organized into the following structure:
 
 - `src/`: Contains all the source code files.
-- `Results/`: Used for storing datasets, both raw and processed.
-- `dataset/`: Pre-trained models and training scripts.
+- `dataset/`: Used for storing datasets.
+- `Results/`: Trained models and detection on image by AI.
 
 ### Setup
 
@@ -66,6 +66,8 @@ This is all the data around my results for every model :
 <img src="Results/Train/expL/results.png" width="500" height="300" alt="Training Label Results L">
 <img src="Results/Train/expX/results.png" width="500" height="300" alt="Training Label Results X">
 </p>
+
+And there is an exemple of every model accuracy on the same test image val_batch2_pred.jpg in every exp of the Results/Train/exp(..) : 
 
 <p align="center">
     <img src="Results/Train/expS/val_batch2_pred.jpg" width="500" height="500" alt="Training Label Results S">
