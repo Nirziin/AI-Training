@@ -32,7 +32,7 @@ Here are the specifities of every Model:
 
 The source code for this project is organized into the following structure:
 
-- `src/`: Contains all the source code files.
+- `src`: Contains all the source code files.
 - `dataset/`: Used for storing datasets.
 - `Results/`: Trained models and detection on image by AI.
 
