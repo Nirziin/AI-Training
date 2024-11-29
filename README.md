@@ -43,8 +43,6 @@ The project's results are evaluated based on several key metrics:
 - **Speed**: Time taken to process and translate text from images.
 - **Memory Efficiency**: Resource usage of the model.
 
-Graphs and tables will be utilized to present these metrics for easier comprehension.
-
 Here is the label repartition of my dataset : 
 
 <p align="center">
