@@ -1,6 +1,13 @@
 # AI-Training
 
-#Project Results and Overview: Summarize the key objectives, results, and insights from your project. Provide context to help viewers understand the motivation and significance of your work.
+![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)![PyTorch](https://img.shields.io/badge/PyTorch-%23EE4C2C.svg?style=for-the-badge&logo=PyTorch&logoColor=white)
+
+## Project Results and Overview: 
+Summarize the key objectives, results, and insights from your project. Provide context to help viewers understand the motivation and significance of your work.
+
+<a href="https://docs.ultralytics.com/models/yolo11/" target="_blank">
+  <img width="100%" src="https://raw.githubusercontent.com/ultralytics/assets/refs/heads/main/yolo/performance-comparison.png" alt="YOLO11 performance plots">
+</a>
 
 At the begining, my projet is a translator opensource with AI on images or vidéos. While it takes a lot of memory to train and I don't have a great computer to do that, I had to reduce at the minimum this project. I will continue this project if I have enough time and the computer for.
 The key objectives of this project were : 
@@ -25,14 +32,20 @@ First, I train the AI to analyze and find the letters in a lor of images.
   - [My dataset](https://universe.roboflow.com/ann36chen-hbcoz/0603-3/dataset/7) for the training is a dataset opensource on RoboFlow with 1175 images with label.
 To compare, I used YoloV5 S, M, L and X. Every train with every model was more and more accurate.
 
-#Source Code: Organize and document all source code for the project. Include a clear file structure, instructions for setup, and any necessary dependencies for running the code.
+## Source Code: 
+Organize and document all source code for the project. Include a clear file structure, instructions for setup, and any necessary dependencies for running the code.
 
-#Performance Metrics: Detail the performance metrics achieved by your project, including accuracy, speed, memory efficiency, or any other relevant benchmarks. Consider using graphs or tables for better clarity.
+## Performance Metrics: 
+Detail the performance metrics achieved by your project, including accuracy, speed, memory efficiency, or any other relevant benchmarks. Consider using graphs or tables for better clarity.
 
-#Installation and Usage: Provide step-by-step instructions for installing and running the project. Include examples or scripts to demonstrate typical usage.
+## Installation and Usage:
+Provide step-by-step instructions for installing and running the project. Include examples or scripts to demonstrate typical usage.
 
-#References and Documentation: Link to any relevant papers, libraries, or other sources that contributed to your project. Include explanations of key algorithms or techniques as needed.
+## References and Documentation: 
+Link to any relevant papers, libraries, or other sources that contributed to your project. Include explanations of key algorithms or techniques as needed.
 
-#Issues and Contributions: Specify any known issues or limitations, and encourage contributions by outlining how others can contribute, report bugs, or suggest enhancements.
+## Issues and Contributions: 
+Specify any known issues or limitations, and encourage contributions by outlining how others can contribute, report bugs, or suggest enhancements.
 
-#Future Work: Briefly discuss any potential improvements or areas for future development to show the direction of your work.
+## Future Work: 
+Briefly discuss any potential improvements or areas for future development to show the direction of your work.
