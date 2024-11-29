@@ -1,0 +1,71 @@
+//Clone the YOLOV5 Github to gets all models
+
+!git clone https://github.com/ultralytics/yolov5
+%cd yolov5
+!pip install -r requirements.txt
+
+// Installing ROBOFLOW and get my dataset.
+!pip install roboflow
+
+from roboflow import Roboflow
+rf = Roboflow(api_key="Ujqir5oI5HHmkWkj4v9K")
+project = rf.workspace("ann36chen-hbcoz").project("0603-3")
+version = project.version(7)
+dataset = version.download("yolov5")
+
+// Training 
+// S model
+!python train.py --img 416 --batch 16 --epochs 50 --data 0603-3-7/data.yaml --weights yolov5s.pt --cache
+// M Model
+!python train.py --img 416 --batch 16 --epochs 50 --data 0603-3-7/data.yaml --weights yolov5m.pt --cache
+// L Model
+!python train.py --img 416 --batch 16 --epochs 50 --data 0603-3-7/data.yaml --weights yolov5l.pt --cache
+// X Model
+!python train.py --img 416 --batch 16 --epochs 50 --data 0603-3-7/data.yaml --weights yolov5x.pt --cache
+
+// Detection of letters for every trained model
+// S model
+!python detect.py --weights runs/train/expS/weights/best.pt --source /content/yolov5/0603-3-7/test/images/ --img 640 --conf 0.25
+// M Model
+!python detect.py --weights runs/train/expM/weights/best.pt --source /content/yolov5/0603-3-7/test/images/ --img 640 --conf 0.25
+// L Model
+!python detect.py --weights runs/train/expL/weights/best.pt --source /content/yolov5/0603-3-7/test/images/ --img 640 --conf 0.25
+// X Model
+!python detect.py --weights runs/train/expX/weights/best.pt --source /content/yolov5/0603-3-7/test/images/ --img 640 --conf 0.25
+
+
+
+// Untested code to translate detected words in images.
+// Can work if the AI can get the words instead of every separated letters.
+
+import torch
+from googletrans import Translator
+import cv2
+
+# YoloV5
+model = torch.hub.load('ultralytics/yolov5', 'custom', path='runs/train/exp/weights/best.pt')
+
+def detect_letters(image_path):
+    img = cv2.imread(image_path)
+    results = model(img)  # Détection des lettres
+    return results
+
+# Traduction
+def translate_words(image_path):
+    results = detect_letters(image_path)
+
+    letters = results.names
+    boxes = results.xywh[0]  # coordonnées des boîtes englobantes
+    
+    sorted_boxes = sorted(zip(boxes[:, 0], boxes[:, 1], boxes[:, 2], boxes[:, 3], results.names), key=lambda x: x[0])
+    
+    word = ''.join([letter for _, _, _, _, letter in sorted_boxes])
+    
+    translator = Translator()
+    translation = translator.translate(word, src='fr', dest='en')
+    
+    print(f"Mot détecté : {word}")
+    print(f"Traduction : {translation.text}")
+
+image_path = "MyImage.jpg"
+translate_words(image_path)
