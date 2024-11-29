@@ -48,9 +48,9 @@ Here is the label repartition of my dataset :
 
 For every compared result, the images will be sorted in that way:
 
-|   S   | M     |
-|-------|-------|
-| **L** | **X** |
+              |   S   | M     |
+              |-------|-------|
+              | **L** | **X** |
 
 This is all the data around my results for every model :
 
