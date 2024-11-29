@@ -25,12 +25,6 @@ The source code for this project is organized into the following structure:
 - `dataset/`: Used for storing datasets.
 - `Results/`: Trained models and detection on image by AI.
 
-### Setup
-
-1. Clone this repository to your local machine.
-2. Ensure Python 3.x is installed.
-3. Install the required packages via `pip install -r requirements.txt`.
-
 ## Performance Metrics
 
 The project's results are evaluated based on several key metrics:
